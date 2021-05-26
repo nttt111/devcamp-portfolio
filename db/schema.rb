@@ -19,4 +19,11 @@ ActiveRecord::Schema.define(version: 2021_05_26_021922) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "skills", force: :cascade do |t|
+    t.string "title"
+    t.integer "percent_utilized"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+ 
 end
