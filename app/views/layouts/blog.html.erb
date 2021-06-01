@@ -3,10 +3,11 @@
   <head>
     <title><%= @page_title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="<%= @seo_keyword %> />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
-    <meta name="keywords" content="<%= @seo_keyword %> />
+   
     
     <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -20,7 +21,7 @@
 
     <%= yield %>
 
-    <%= render 'shared/nav'  %>
+    <%= render "shared/nav", location: 'bottom'  %>
 
     <% if session[:source] %>
     <p>Thanks for visiting me from <%= session[:source] %></p>
